@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio - Dashboards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', serif;
+      background-color: #ffffff;
+      color: #444;
+      line-height: 1.6;
+      padding: 40px 300px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 28px;
+    }
+
+    .logo b {
+      color: #1a1a1a;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #555;
+      font-size: 16px;
+      position: relative;
+      transition: color 0.2s ease;
+      cursor: pointer;
+    }
+
+    nav a:nth-child(2) {
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    nav a:hover {
+      color: #1a1a1a;
+    }
+    nav a:hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: #f5b400;
+      border-radius: 2px;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .titulo h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .titulo h1::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: #f5b400;
+      margin-top: 6px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 2rem 0;
+      width: 100%;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+      aspect-ratio: 16 / 9;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(18, 18, 18, 0.8);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    .btn {
+      padding: 0.7rem 1.2rem;
+      background-color: #f5b400;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #f5b400;
+      opacity: 0.9;
+    }
+
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><b>Adalberto</b> Nava</div>
+    <nav>
+      <a href="index.html">Currículum</a>
+      <a href="#">Portafolio</a>
+    </nav>
+  </header>
+
+  <div class="titulo">
+    <h1>Portafolio</h1>
+  </div>
+
+  <iframe title="Dashboard_Accidentes_Tránsito2023" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=04a02628-3fff-473c-91ac-6c65278409d9&autoAuth=true&ctid=efc00b8d-6886-418a-a44a-d08998ba4a33" frameborder="0" allowFullScreen="true"></iframe>
+
+  <main class="dashboard-grid">
+    <div class="card">
+      <img src="images/dashboard1.jpg" alt="Dashboard | DiGRA 2024">
+      <div class="overlay">
+        <a href="dashboard1.html" class="btn">Ver más</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/dashboard2.jpg" alt="Dashboard | Alitas">
+      <div class="overlay">
+        <a href="dashboard2.html" class="btn">Ver más</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/dashboard3.jpg" alt="Dashboard | Clientes">
+      <div class="overlay">
+        <a href="dashboard3.html" class="btn">Ver más</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/dashboard4.jpg" alt="Dashboard | Clientes">
+      <div class="overlay">
+        <a href="dashboard4.html" class="btn">Ver más</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/dashboard5.jpg" alt="Dashboard | Clientes">
+      <div class="overlay">
+        <a href="dashboard5.html" class="btn">Ver más</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/dashboard6.jpg" alt="Dashboard | Clientes">
+      <div class="overlay">
+        <a href="dashboard6.html" class="btn">Ver más</a>
+      </div>
+    </div>
+  </main>
+<iframe title="Dashboard_Clientes" width="910" height="520" src="https://app.powerbi.com/reportEmbed?reportId=8009d5a0-603f-4c1a-81d6-8cddca9d3cd6&autoAuth=true&ctid=efc00b8d-6886-418a-a44a-d08998ba4a33" frameborder="0" allowFullScreen="true"></iframe>
+  <footer>
+    <p>© 2025 Adalberto Nava. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
